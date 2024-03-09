@@ -29,7 +29,7 @@ def chat():
     response.resolve()
     result=response.text
     res = json.loads(result)
-    return jsonify(res, status=200, mimetype='application/json')
+    return jsonify(res)
   except Exception as e:
     return jsonify({"error": str(e)})
 
